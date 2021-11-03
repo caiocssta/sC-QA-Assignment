@@ -7,6 +7,10 @@
     "reporterOptions": {
         "configFile": "reporter-config.json"
     },
-    "defaultCommandTimeout": 15000,
-    "testFiles": ["**/*.spec.js"]
+    "defaultCommandTimeout": 10000,
+    "testFiles": ["**/*.spec.js"],
+    "retries": {
+        "runMode": 1,
+        "openMode": 1
+    }
 }
