@@ -3,9 +3,13 @@
     "integrationFolder": "cypress/tests",
     "screenshotOnRunFailure": false,
     "video": false,
-    "reporter": "cypress-multi-reporters",
+    "reporter": "mochawesome",
     "reporterOptions": {
-        "configFile": "reporter-config.json"
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome-report"
     },
     "defaultCommandTimeout": 10000,
     "testFiles": ["**/*.spec.js"],
