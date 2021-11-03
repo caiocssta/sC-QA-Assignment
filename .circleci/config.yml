@@ -15,7 +15,7 @@ workflows:
                 name: Create mochawesome report
                 command: npm run merge
             - store_artifacts:
-                path: cypress/reports/
+                path: cypress/reports/output.html
             - store_test_results:
-                path: cypress/reports
+                path: cypress/reports/mochawesome-report
           
