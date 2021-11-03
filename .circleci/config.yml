@@ -11,8 +11,9 @@ workflows:
           group: 'spriteCloud QA Assignment'
           post-steps:
             - run:
-              name: Make artifact directories
-              command: mkdir -p /cypress/reports/
+                when: always
+                name: Make artifact directories
+                command: mkdir -p /cypress/reports/
             - run: 
                 when: always
                 name: Create mochawesome report
