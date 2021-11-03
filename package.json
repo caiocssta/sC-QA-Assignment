@@ -12,6 +12,7 @@
     "mochawesome-report-generator": "^5.2.0"
   },
   "scripts": {
+    "pretest": "if exist cypress\\reports rmdir cypress\\reports /s /q",
     "cy:test": "cypress run --reporter mochawesome",
     "merge": "mochawesome-merge cypress/reports/mochawesome-report/*.json > cypress/reports/mochawesome.json",
     "generate_mochawesome_report": "marge cypress/reports/mochawesome.json --reportDir ./ --inline",

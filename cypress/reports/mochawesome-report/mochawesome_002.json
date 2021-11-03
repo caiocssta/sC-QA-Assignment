@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-03T23:18:05.000Z",
+    "end": "2021-11-03T23:18:05.660Z",
+    "duration": 660,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e247146d-34f1-430c-a2db-e242c5a2c907",
+      "title": "",
+      "fullFile": "cypress/tests/api/user.spec.js",
+      "file": "cypress/tests/api/user.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "956f98f1-6031-48c5-be0b-b7dd986578ab",
+          "title": "Handle users data",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create new user",
+              "fullTitle": "Handle users data Create new user",
+              "timedOut": null,
+              "duration": 172,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.createUser(newUserData).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "d7ec78f8-64d4-4907-a3b0-f53e1698b043",
+              "parentUUID": "956f98f1-6031-48c5-be0b-b7dd986578ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get user data by name",
+              "fullTitle": "Handle users data Get user data by name",
+              "timedOut": null,
+              "duration": 161,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getUserByName(newUserData.username).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.id).to.not.null;\n  expect(response.body.firstName).to.not.null;\n  expect(response.body.lastName).to.not.null;\n  expect(response.body.email).to.not.null;\n  expect(response.body.password).to.not.null;\n  expect(response.body.phone).to.not.null;\n  expect(response.body.userStatus).to.not.null;\n});",
+              "err": {},
+              "uuid": "30d26f82-522e-460d-9253-055ccd936bd9",
+              "parentUUID": "956f98f1-6031-48c5-be0b-b7dd986578ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login user",
+              "fullTitle": "Handle users data Login user",
+              "timedOut": null,
+              "duration": 153,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginUser(newUserData.username, newUserData.password).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.message).to.contain('logged in user session');\n});",
+              "err": {},
+              "uuid": "92df53fd-59f3-4c7b-b96a-cbe5d368fc3d",
+              "parentUUID": "956f98f1-6031-48c5-be0b-b7dd986578ab",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logout user",
+              "fullTitle": "Handle users data Logout user",
+              "timedOut": null,
+              "duration": 152,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.logoutUser().then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.message).to.equal('ok');\n});",
+              "err": {},
+              "uuid": "1f4d8150-68ea-4459-8e65-4825a0ea30b4",
+              "parentUUID": "956f98f1-6031-48c5-be0b-b7dd986578ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d7ec78f8-64d4-4907-a3b0-f53e1698b043",
+            "30d26f82-522e-460d-9253-055ccd936bd9",
+            "92df53fd-59f3-4c7b-b96a-cbe5d368fc3d",
+            "1f4d8150-68ea-4459-8e65-4825a0ea30b4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 638,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome-report"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

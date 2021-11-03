@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-03T23:18:01.060Z",
+    "end": "2021-11-03T23:18:02.176Z",
+    "duration": 1116,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c1bbdd51-27d5-4033-bec0-fc10f796f6f0",
+      "title": "",
+      "fullFile": "cypress/tests/api/pet.spec.js",
+      "file": "cypress/tests/api/pet.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f5306e40-846b-4fc0-bfb6-23249014cbef",
+          "title": "Handle pets data",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add new pet to store functionality should return 200",
+              "fullTitle": "Handle pets data Add new pet to store functionality should return 200",
+              "timedOut": null,
+              "duration": 779,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.addPet(newPetData).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "3252779e-4482-4212-8234-a93512ca2f03",
+              "parentUUID": "f5306e40-846b-4fc0-bfb6-23249014cbef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Find a pet by ID should return correct pet data",
+              "fullTitle": "Handle pets data Find a pet by ID should return correct pet data",
+              "timedOut": null,
+              "duration": 162,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getPetById(newPetData.id).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.id).to.not.null;\n  expect(response.body.name).to.not.null;\n  expect(response.body.status).to.not.null;\n});",
+              "err": {},
+              "uuid": "1a2360aa-c36d-4a23-8687-871a25a728a1",
+              "parentUUID": "f5306e40-846b-4fc0-bfb6-23249014cbef",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete a pet should return 200",
+              "fullTitle": "Handle pets data Delete a pet should return 200",
+              "timedOut": null,
+              "duration": 154,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.deletePet(1, api_key).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "25e534cc-9eb3-4d18-90c8-450e84f42d8d",
+              "parentUUID": "f5306e40-846b-4fc0-bfb6-23249014cbef",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3252779e-4482-4212-8234-a93512ca2f03",
+            "1a2360aa-c36d-4a23-8687-871a25a728a1",
+            "25e534cc-9eb3-4d18-90c8-450e84f42d8d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1095,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome-report"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-03T23:18:38.841Z",
+    "end": "2021-11-03T23:18:46.308Z",
+    "duration": 7467,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8df9a918-2b9b-4b02-b0fb-28fa7db05480",
+      "title": "",
+      "fullFile": "cypress/tests/web/elementList.spec.js",
+      "file": "cypress/tests/web/elementList.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ff290afe-221c-4456-aeeb-b9a4cbe5cb44",
+          "title": "Validate sub-list",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Element sublist displays all elements",
+              "fullTitle": "Validate sub-list Element sublist displays all elements",
+              "timedOut": null,
+              "duration": 5101,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let elementSubList = ['Text Box', 'Check Box', 'Radio Button', 'Web Tables', 'Buttons', 'Links', 'Broken Links - Images', 'Upload and Download', 'Dynamic Properties'];\ncy.itemsAreDisplayed('Elements', elementSubList);",
+              "err": {},
+              "uuid": "86026200-32cf-4cab-9fe8-e32939357932",
+              "parentUUID": "ff290afe-221c-4456-aeeb-b9a4cbe5cb44",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Forms sublist displays all elements",
+              "fullTitle": "Validate sub-list Forms sublist displays all elements",
+              "timedOut": null,
+              "duration": 254,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let formsSubList = ['Practice Form'];\ncy.itemsAreDisplayed('Forms', formsSubList);",
+              "err": {},
+              "uuid": "04ad9335-1429-4ebe-94bc-fd8b7f3cbdc2",
+              "parentUUID": "ff290afe-221c-4456-aeeb-b9a4cbe5cb44",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alerts, Frame & Windows sublist displays all elements",
+              "fullTitle": "Validate sub-list Alerts, Frame & Windows sublist displays all elements",
+              "timedOut": null,
+              "duration": 264,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let afwSubList = ['Browser Windows', 'Alerts', 'Frames', 'Nested Frames', 'Modal Dialogs'];\ncy.itemsAreDisplayed('Alerts, Frame & Windows', afwSubList);",
+              "err": {},
+              "uuid": "a1327a15-9946-449a-91b0-8a14234135b6",
+              "parentUUID": "ff290afe-221c-4456-aeeb-b9a4cbe5cb44",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Widgets sublist displays all elements",
+              "fullTitle": "Validate sub-list Widgets sublist displays all elements",
+              "timedOut": null,
+              "duration": 389,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let widgetsSubList = ['Accordian', 'Auto Complete', 'Date Picker', 'Slider', 'Progress Bar', 'Tabs', 'Tool Tips', 'Menu', 'Select Menu'];\ncy.itemsAreDisplayed('Widgets', widgetsSubList);",
+              "err": {},
+              "uuid": "15c69ce2-85f7-4f10-bf4d-aaf602342c1d",
+              "parentUUID": "ff290afe-221c-4456-aeeb-b9a4cbe5cb44",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Interactions sublist displays all elements",
+              "fullTitle": "Validate sub-list Interactions sublist displays all elements",
+              "timedOut": null,
+              "duration": 241,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let interactionsSubList = ['Sortable', 'Selectable', 'Resizable', 'Droppable', 'Dragabble'];\ncy.itemsAreDisplayed('Interactions', interactionsSubList);",
+              "err": {},
+              "uuid": "9cedf4b1-a47e-48c7-af90-7fb995e4a475",
+              "parentUUID": "ff290afe-221c-4456-aeeb-b9a4cbe5cb44",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book Store Application sublist displays all elements",
+              "fullTitle": "Validate sub-list Book Store Application sublist displays all elements",
+              "timedOut": null,
+              "duration": 218,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let bookstoreSubList = ['Login', 'Book Store', 'Profile', 'Book Store API'];\ncy.itemsAreDisplayed('Book Store Application', bookstoreSubList);",
+              "err": {},
+              "uuid": "f77ce0ef-4ad6-4cae-856b-1e98647683e1",
+              "parentUUID": "ff290afe-221c-4456-aeeb-b9a4cbe5cb44",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "86026200-32cf-4cab-9fe8-e32939357932",
+            "04ad9335-1429-4ebe-94bc-fd8b7f3cbdc2",
+            "a1327a15-9946-449a-91b0-8a14234135b6",
+            "15c69ce2-85f7-4f10-bf4d-aaf602342c1d",
+            "9cedf4b1-a47e-48c7-af90-7fb995e4a475",
+            "f77ce0ef-4ad6-4cae-856b-1e98647683e1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6467,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome-report"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

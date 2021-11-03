@@ -1,0 +1,202 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 2,
+    "failures": -1,
+    "start": "2021-11-03T23:18:06.511Z",
+    "end": "2021-11-03T23:18:37.385Z",
+    "duration": 30874,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 33.33333333333333,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f16631cc-4cb2-4ea8-8376-8a03ec375536",
+      "title": "",
+      "fullFile": "cypress/tests/web/bookStore.spec.js",
+      "file": "cypress/tests/web/bookStore.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "347699e2-ad45-4d04-a39f-b35382df2c4a",
+          "title": "Validate Book Store functionalities",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Books information are displayed correctly",
+              "fullTitle": "Validate Book Store functionalities Books information are displayed correctly",
+              "timedOut": null,
+              "duration": 11343,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let bookInfo = {\n  ISBN: '9781449325862',\n  title: 'Git Pocket Guide',\n  subTitle: 'A Working Introduction',\n  author: 'Richard E. Silverman',\n  publisher: 'O\\'Reilly Media',\n  totalPages: '234',\n  description: 'This pocket guide is the perfect on-the-job companion to Git, the distributed version control system. It provides a compact, readable introduction to Git for new users, as well as a reference to common commands and procedures for those of you with Git exp',\n  website: 'http://chimera.labs.oreilly.com/books/1230000000561/index.html'\n};\ncy.get(_selectors.profileSelectors.goToStoreButton).click();\ncy.get(_selectors.bookStoreSelectors.gitPocketBook).click();\ncy.contains(bookInfo.ISBN).should('be.visible');\ncy.contains(bookInfo.title).should('be.visible');\ncy.contains(bookInfo.subTitle).should('be.visible');\ncy.contains(bookInfo.author).should('be.visible');\ncy.contains(bookInfo.publisher).should('be.visible');\ncy.contains(bookInfo.totalPages).should('be.visible');\ncy.contains(bookInfo.description).should('be.visible');\ncy.contains(bookInfo.website).should('be.visible');",
+              "err": {},
+              "uuid": "dd57eaf3-4f75-459c-a2a2-d069a55183c2",
+              "parentUUID": "347699e2-ad45-4d04-a39f-b35382df2c4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add to Your Collection button works fine",
+              "fullTitle": "Validate Book Store functionalities Add to Your Collection button works fine",
+              "timedOut": null,
+              "duration": 8081,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_selectors.profileSelectors.goToStoreButton).click();\ncy.get(_selectors.bookStoreSelectors.gitPocketBook).click();\ncy.contains('Add To Your Collection').click();\ncy.on('window:alert', text => {\n  expect(text).to.equal('Book added to your collection.');\n});\ncy.contains('Profile').click({\n  force: true\n});\ncy.get(_selectors.bookStoreSelectors.gitPocketBook).should('be.visible');",
+              "err": {},
+              "uuid": "725f0090-f012-403c-aebe-ed04a634964e",
+              "parentUUID": "347699e2-ad45-4d04-a39f-b35382df2c4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Not able to add the same book twice",
+              "fullTitle": "Validate Book Store functionalities Not able to add the same book twice",
+              "timedOut": null,
+              "duration": 5842,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_selectors.profileSelectors.goToStoreButton).click();\ncy.get(_selectors.bookStoreSelectors.gitPocketBook).click();\ncy.contains('Add To Your Collection').click();\ncy.on('window:alert', text => {\n  expect(text).to.equal('Book already present in the your collection!.');\n});",
+              "err": {},
+              "uuid": "02fe3aed-1ba4-41ef-bce0-dfabf0d37584",
+              "parentUUID": "347699e2-ad45-4d04-a39f-b35382df2c4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete All Books button works fine",
+              "fullTitle": "Validate Book Store functionalities Delete All Books button works fine",
+              "timedOut": null,
+              "duration": 3292,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(_selectors.profileSelectors.deleteAllBooksButton).click();\ncy.get(_selectors.profileSelectors.modalOkButton).click();\ncy.get(_selectors.bookStoreSelectors.gitPocketBook).should('not.exist');",
+              "err": {},
+              "uuid": "fb98cd75-945e-494c-91d8-25404b325a69",
+              "parentUUID": "347699e2-ad45-4d04-a39f-b35382df2c4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Register page is correctly displayed",
+              "fullTitle": "Validate Book Store functionalities Register page is correctly displayed",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "9aece4b1-ad4c-4f19-b485-e723f5f4ad94",
+              "parentUUID": "347699e2-ad45-4d04-a39f-b35382df2c4a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Log Out works fine",
+              "fullTitle": "Validate Book Store functionalities Log Out works fine",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "4cfcd6ef-5d3b-4ba5-94ea-f544cbd4e57a",
+              "parentUUID": "347699e2-ad45-4d04-a39f-b35382df2c4a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dd57eaf3-4f75-459c-a2a2-d069a55183c2",
+            "725f0090-f012-403c-aebe-ed04a634964e",
+            "02fe3aed-1ba4-41ef-bce0-dfabf0d37584",
+            "fb98cd75-945e-494c-91d8-25404b325a69"
+          ],
+          "failures": [],
+          "pending": [
+            "9aece4b1-ad4c-4f19-b485-e723f5f4ad94",
+            "4cfcd6ef-5d3b-4ba5-94ea-f544cbd4e57a"
+          ],
+          "skipped": [],
+          "duration": 28558,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports/mochawesome-report"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
