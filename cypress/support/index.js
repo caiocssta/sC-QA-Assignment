@@ -14,7 +14,9 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './api/commands'
+import './api/pet/commands'
+import './api/store/commands'
+import './api/users/commands'
 import './web/commands'
 
 // Alternatively you can use CommonJS syntax:
