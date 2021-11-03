@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 
-import { loginSelectors, registerSelectors, profileSelectors, bookStoreSelectors, loginUrl } from "./selectors";
+import { loginSelectors, registerSelectors, profileSelectors, bookStoreSelectors } from "./selectors";
 
 describe("Validate Book Store functionalities", () => {
     let username, password;
 
     before(() => {
-        cy.fixture('userInformation').then((props) => {
+        cy.fixture('web/userInformation').then((props) => {
             username = props.username;
             password = props.password;
         });
