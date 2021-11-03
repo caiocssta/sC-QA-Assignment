@@ -1,0 +1,12 @@
+{
+    "baseUrl": "https://petstore.swagger.io/",
+    "integrationFolder": "cypress/tests",
+    "screenshotOnRunFailure": false,
+    "video": false,
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    },
+    "defaultCommandTimeout": 15000,
+    "testFiles": ["**/*.spec.js"]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "spritecloud",
+  "version": "1.0.0",
+  "description": "spriteCloud QA Assignment",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^8.7.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.1.3",
+    "mochawesome": "^6.3.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  },
+  "scripts": {
+    "test": "cypress run",
+    "report:merge": "mochawesome-merge cypress/results/json/*.json > cypress/results/mochawesome-bundle.json",
+    "report:generate": "marge cypress/results/mochawesome-bundle.json -f report -o cypress/results/mochareports",
+    "posttest": "npm run report:merge && npm run report:generate",
+    "cypress:run": "npm run test || npm run posttest"
+  },
+  "author": "Caio Costa",
+  "license": "ISC"
+}

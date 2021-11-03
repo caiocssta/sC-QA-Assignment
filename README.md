@@ -1,0 +1,1 @@
+# spriteCloud-QA-Assignment
