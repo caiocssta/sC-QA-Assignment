@@ -14,6 +14,10 @@ workflows:
                 when: always
                 name: Create mochawesome report
                 command: npm run merge
+            - run: 
+                when: always
+                name: Generate mochawesome HTML report
+                command: npm run generate_mochawesome_report
             - store_artifacts:
                 path: cypress/reports/output.html
             - store_test_results:
