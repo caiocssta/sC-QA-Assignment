@@ -19,7 +19,7 @@ workflows:
                 name: Create mochawesome report
                 command: npm run cy:report
             - store_artifacts:
-                path: cypress/reports/artifacts
+                path: cypress/reports/
             - store_test_results:
-                path: cypress/reports
+                path: cypress/reports/
           
