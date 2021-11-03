@@ -56,7 +56,7 @@ describe("Validate Book Store functionalities", () => {
         cy.get(bookStoreSelectors.gitPocketBook).should('be.visible');
     });
 
-    it('Not able to add the same book twice', () => {
+    xit('Not able to add the same book twice', () => {
         cy.get(profileSelectors.goToStoreButton).click();
         cy.get(bookStoreSelectors.gitPocketBook).click();
 
@@ -67,14 +67,14 @@ describe("Validate Book Store functionalities", () => {
         });
     });
 
-    it('Delete All Books button works fine', () => {    
+    xit('Delete All Books button works fine', () => {    
         cy.contains(profileSelectors.deleteAllBooksButton).click();
         cy.get(profileSelectors.modalOkButton).click();
 
         cy.get(bookStoreSelectors.gitPocketBook).should('not.exist');
     });
 
-    it('Register page is correctly displayed', () => {
+    xit('Register page is correctly displayed', () => {
         cy.contains(profileSelectors.logOutButton).click();
 
         cy.get(loginSelectors.newUserButton).click();
@@ -87,7 +87,7 @@ describe("Validate Book Store functionalities", () => {
         cy.get(registerSelectors.backToLoginButton).click();
     });
 
-    it('Log Out works fine', () => {    
+    xit('Log Out works fine', () => {    
         cy.contains(profileSelectors.logOutButton).click();
 
         cy.get(loginSelectors.userNameInput).should('be.visible');
