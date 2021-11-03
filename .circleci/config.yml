@@ -1,0 +1,25 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7
+  cypress: cypress-io/cypress@1.29.0
+
+workflows:
+  spritecloud-assignment: 
+    jobs:
+      - cypress/run:
+          group: 'spriteCloud QA Assignment'
+          post-steps:
+            - run: 
+                when: always
+                name: Run Cypress tests
+                command: npm run cy:test
+            - run: 
+                when: always
+                name: Create mochawesome report
+                command: npm run cy:report
+            - store_artifacts:
+                path: cypress/reports/
+            - store_test_results:
+                path: cypress/reports
+          
