@@ -12,14 +12,10 @@ workflows:
           post-steps:
             - run: 
                 when: always
-                name: Run Cypress tests
-                command: npm run cy:test
-            - run: 
-                when: always
                 name: Create mochawesome report
                 command: npm run cy:report
             - store_artifacts:
                 path: cypress/reports/
             - store_test_results:
-                path: cypress/reports
+                path: reports
           
