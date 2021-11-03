@@ -12,8 +12,7 @@ workflows:
           post-steps:
             - run:
               name: Make artifact directories
-              command: |
-                mkdir -p /cypress/reports/
+              command: mkdir -p /cypress/reports/
             - run: 
                 when: always
                 name: Create mochawesome report
