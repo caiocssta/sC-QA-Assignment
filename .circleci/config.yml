@@ -19,7 +19,7 @@ workflows:
                 name: Generate mochawesome HTML report
                 command: npm run generate_mochawesome_report
             - store_artifacts:
-                path: cypress/reports/output.html
+                path: mochawesome.html
             - store_test_results:
-                path: cypress/reports/mochawesome-report
+                path: ~/cypress/reports/
           
