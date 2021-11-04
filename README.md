@@ -14,7 +14,7 @@
 ## 7. The codebase has a readme.md file explaining:
 ### a. How to run the tests locally
 
-For running the tests locally, you must have *NodeJS* installed. The project was developed using the version v14. So if needed, *nvm* might help on that. :) \
+For running the tests locally, you must have *NodeJS* installed. The project was developed using the version v14. So if needed, *nvm* might help on that. :) 
 
 
 Once you've installed NodeJS, you can install the project packages and dependencies using the command 
