@@ -56,11 +56,3 @@ For the API, would be good to keep incrementing the suite with tests for the oth
     
     I've also noticed some other people is using the Swagger at the same moment (since it's public), and some data is constantly deleted or updated by someone else.
 ## 8. You nail the interviews!
-
-
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
