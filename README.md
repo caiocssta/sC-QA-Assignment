@@ -43,6 +43,7 @@ The website given to automate web is quite messy and not so much intuitive (some
 - the Log Out functionality.
     
     *OBS.: You're going to see that there are some flows that are commented to do not get executed (xit). Those flows are broken and not working properly on the website, but I've put them in the suite to assure the coverage.*
+ 
  For the Pet Store API, I've selected the main flows related to each part of the store (Pet, Store and User), such as adding a new object with a POST request, retrieving an existing object with GET and deleting a object with DELETE.
 
 
