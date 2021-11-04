@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-11-03T23:18:03.098Z",
-    "end": "2021-11-03T23:18:03.607Z",
-    "duration": 509,
+    "start": "2021-11-04T01:11:59.880Z",
+    "end": "2021-11-04T01:12:00.402Z",
+    "duration": 522,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f41f0cf2-2702-4e88-bbd5-90c08478672d",
+      "uuid": "b508f5ef-22cf-4006-acd1-045ee1b95a87",
       "title": "",
       "fullFile": "cypress/tests/api/store.spec.js",
       "file": "cypress/tests/api/store.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "546dd9c1-7375-40d0-bb33-86fdb2a8cea3",
+          "uuid": "e0d3f618-69cf-431c-bc99-aa9d3c2ac5b8",
           "title": "Handle pet store data",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Place new order should return 200",
               "fullTitle": "Handle pet store data Place new order should return 200",
               "timedOut": null,
-              "duration": 175,
+              "duration": 183,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.placeOrder(newOrderData).then(response => {\n  expect(response.status).to.eq(200);\n});",
               "err": {},
-              "uuid": "c5fcdea4-ef18-43f2-83a3-e78306e9e75e",
-              "parentUUID": "546dd9c1-7375-40d0-bb33-86fdb2a8cea3",
+              "uuid": "1f221443-1f74-4476-b523-4f8f9ee512bd",
+              "parentUUID": "e0d3f618-69cf-431c-bc99-aa9d3c2ac5b8",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Find an order by ID should return data",
               "fullTitle": "Handle pet store data Find an order by ID should return data",
               "timedOut": null,
-              "duration": 161,
+              "duration": 165,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.getOrderById(4).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.id).to.not.null;\n  expect(response.body.petId).to.not.null;\n  expect(response.body.quantity).to.not.null;\n  expect(response.body.shipDate).to.not.null;\n  expect(response.body.status).to.not.null;\n  expect(response.body.complete).to.not.null;\n});",
               "err": {},
-              "uuid": "698b087a-9523-4ae6-ad7b-2d6878050f25",
-              "parentUUID": "546dd9c1-7375-40d0-bb33-86fdb2a8cea3",
+              "uuid": "e080b811-47f3-4c0b-b067-16f3082ba45c",
+              "parentUUID": "e0d3f618-69cf-431c-bc99-aa9d3c2ac5b8",
               "isHook": false,
               "skipped": false
             },
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.deleteOrder(newOrderData.id).then(response => {\n  expect(response.status).to.eq(200);\n});",
               "err": {},
-              "uuid": "819124ad-80b7-4b47-a84e-6ade9149e5ae",
-              "parentUUID": "546dd9c1-7375-40d0-bb33-86fdb2a8cea3",
+              "uuid": "0e45451a-5cf9-40b4-a8a8-92ed9bb5760e",
+              "parentUUID": "e0d3f618-69cf-431c-bc99-aa9d3c2ac5b8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c5fcdea4-ef18-43f2-83a3-e78306e9e75e",
-            "698b087a-9523-4ae6-ad7b-2d6878050f25",
-            "819124ad-80b7-4b47-a84e-6ade9149e5ae"
+            "1f221443-1f74-4476-b523-4f8f9ee512bd",
+            "e080b811-47f3-4c0b-b067-16f3082ba45c",
+            "0e45451a-5cf9-40b4-a8a8-92ed9bb5760e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 489,
+          "duration": 501,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -122,7 +122,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -134,7 +134,7 @@
       "options": {
         "charts": true,
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true,
         "reportDir": "cypress/reports/mochawesome-report"
       },

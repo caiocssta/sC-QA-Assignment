@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-11-03T23:18:01.060Z",
-    "end": "2021-11-03T23:18:02.176Z",
-    "duration": 1116,
+    "start": "2021-11-04T01:11:57.436Z",
+    "end": "2021-11-04T01:11:59.034Z",
+    "duration": 1598,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c1bbdd51-27d5-4033-bec0-fc10f796f6f0",
+      "uuid": "a5e126e5-9d3b-4ce1-847a-6e2f0823079a",
       "title": "",
       "fullFile": "cypress/tests/api/pet.spec.js",
       "file": "cypress/tests/api/pet.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f5306e40-846b-4fc0-bfb6-23249014cbef",
+          "uuid": "489986d7-647c-464d-a0ff-3f0009bb1333",
           "title": "Handle pets data",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Add new pet to store functionality should return 200",
               "fullTitle": "Handle pets data Add new pet to store functionality should return 200",
               "timedOut": null,
-              "duration": 779,
+              "duration": 796,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.addPet(newPetData).then(response => {\n  expect(response.status).to.eq(200);\n});",
               "err": {},
-              "uuid": "3252779e-4482-4212-8234-a93512ca2f03",
-              "parentUUID": "f5306e40-846b-4fc0-bfb6-23249014cbef",
+              "uuid": "5f45ccac-40c7-4ec9-9668-676d039074ca",
+              "parentUUID": "489986d7-647c-464d-a0ff-3f0009bb1333",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Find a pet by ID should return correct pet data",
               "fullTitle": "Handle pets data Find a pet by ID should return correct pet data",
               "timedOut": null,
-              "duration": 162,
+              "duration": 191,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.getPetById(newPetData.id).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.id).to.not.null;\n  expect(response.body.name).to.not.null;\n  expect(response.body.status).to.not.null;\n});",
               "err": {},
-              "uuid": "1a2360aa-c36d-4a23-8687-871a25a728a1",
-              "parentUUID": "f5306e40-846b-4fc0-bfb6-23249014cbef",
+              "uuid": "b02bf7a3-60cc-48f1-975a-4f2f7769030b",
+              "parentUUID": "489986d7-647c-464d-a0ff-3f0009bb1333",
               "isHook": false,
               "skipped": false
             },
@@ -74,31 +74,31 @@
               "title": "Delete a pet should return 200",
               "fullTitle": "Handle pets data Delete a pet should return 200",
               "timedOut": null,
-              "duration": 154,
+              "duration": 176,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.deletePet(1, api_key).then(response => {\n  expect(response.status).to.eq(200);\n});",
+              "code": "cy.deletePet(newPetData.id, api_key).then(response => {\n  expect(response.status).to.eq(200);\n});",
               "err": {},
-              "uuid": "25e534cc-9eb3-4d18-90c8-450e84f42d8d",
-              "parentUUID": "f5306e40-846b-4fc0-bfb6-23249014cbef",
+              "uuid": "37dc23e8-a40f-40d7-b3ae-b0134c63577e",
+              "parentUUID": "489986d7-647c-464d-a0ff-3f0009bb1333",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3252779e-4482-4212-8234-a93512ca2f03",
-            "1a2360aa-c36d-4a23-8687-871a25a728a1",
-            "25e534cc-9eb3-4d18-90c8-450e84f42d8d"
+            "5f45ccac-40c7-4ec9-9668-676d039074ca",
+            "b02bf7a3-60cc-48f1-975a-4f2f7769030b",
+            "37dc23e8-a40f-40d7-b3ae-b0134c63577e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1095,
+          "duration": 1163,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -122,7 +122,7 @@
       "options": {
         "quiet": false,
         "reportFilename": "mochawesome",
-        "saveHtml": true,
+        "saveHtml": false,
         "saveJson": true,
         "consoleReporter": "spec",
         "useInlineDiffs": false,
@@ -134,7 +134,7 @@
       "options": {
         "charts": true,
         "overwrite": false,
-        "html": true,
+        "html": false,
         "json": true,
         "reportDir": "cypress/reports/mochawesome-report"
       },
