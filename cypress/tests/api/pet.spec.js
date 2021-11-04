@@ -28,7 +28,7 @@ describe('Handle pets data', () => {
     });
 
     it('Delete a pet should return 200', () => {
-        cy.deletePet(1, api_key).then((response) => {
+        cy.deletePet(newPetData.id, api_key).then((response) => {
             expect(response.status).to.eq(200);
         });
     });
