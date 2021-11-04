@@ -9,7 +9,7 @@
 ## 5. You add a results folder to the repository, including a result report (HTML,json,xml,etc)
  The folder containing the *mockawesome* JSON and HTML reports is located on the *cypress/reports* directory. 
 ## 6. Manage to upload the test results to Calliope.pro and share a link to the results.
- [Here are the Calliope Pro reports](https://app.calliope.pro/reports/105934). The CI also has a step that automatically sends a new report to CalliopePro everytime it's executed.
+ [Here are the Calliope Pro reports](https://app.calliope.pro/reports/105938). The CI also has a step that automatically sends a new report to CalliopePro everytime it's executed.
 
 ## 7. The codebase has a readme.md file explaining:
 ### a. How to run the tests locally
@@ -29,7 +29,7 @@ Both is going to be located on the *cypress/reports* folder.
 In order to trigger the CI, all you have to do is *push any change* to the *main* branch on the repository. 
 
 ### c. Has a link to the results in Calliope.pro
-Here is the link for the Calliope.pro report: https://app.calliope.pro/reports/105934
+Here is the link for the Calliope.pro report: https://app.calliope.pro/reports/105938
 ### d. What you used to select the scenarios, what was your approach? & e. Why are they the most important
 
 The website given to automate web is quite messy and not so much intuitive (some elements has the same ID value, and a lot others doesn't even have an ID). Besides of the Book Store area, I've decided to automate 
