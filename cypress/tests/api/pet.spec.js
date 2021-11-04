@@ -7,8 +7,8 @@ describe('Handle pets data', () => {
         cy.fixture('api/new-pet-data').then((data) => {
             newPetData = data;
         });
-        cy.fixture('api/api-key').then((key) => {
-            api_key = key.key;
+        cy.fixture('api/api-key').then((data) => {
+            api_key = data.key;
         });
     });
 
