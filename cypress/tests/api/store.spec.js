@@ -16,7 +16,7 @@ describe('Handle pet store data', () => {
     });
 
     it('Find an order by ID should return data', () => {
-        cy.getOrderById(4).then((response) => {
+        cy.getOrderById(8888123812).then((response) => {
             expect(response.status).to.eq(200);
             expect(response.body.id).to.not.null;
             expect(response.body.petId).to.not.null;
