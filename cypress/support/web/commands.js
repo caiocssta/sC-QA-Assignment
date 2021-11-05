@@ -1,4 +1,4 @@
-import { loginSelectors, loginUrl, profileSelectors } from "../../tests/web/selectors";
+import { loginSelectors, loginUrl, profileSelectors } from "./selectors";
 
 Cypress.Commands.add('itemsAreDisplayed', (sectionName, itemList) => {
     cy.contains(sectionName).click({ force: true });

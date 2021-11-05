@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { loginSelectors, registerSelectors, profileSelectors, bookStoreSelectors } from "./selectors";
+import { loginSelectors, registerSelectors, profileSelectors, bookStoreSelectors } from "../../support/web/selectors";
 
 describe("Validate Book Store functionalities", () => {
     let username, password;
