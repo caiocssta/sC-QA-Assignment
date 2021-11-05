@@ -23,7 +23,7 @@ Once you've installed NodeJS, you can install the project packages and dependenc
 With the command `npm run cy:test`, you can trigger the script configured to execute all the tests (except the commented ones).
 
 After the tests execution, with the command `npm run cy:report` you can generate a single JSON report for all the suites, and also a cool HTML report! \
-Both is going to be located on the *cypress/reports* folder.
+Both is going to be located on the *cypress/repo-reports* folder.
 
 ### b. How to run the test in a CI/CD pipeline
 In order to trigger the CI, all you have to do is *push any change* to the *main* branch on the repository. 
