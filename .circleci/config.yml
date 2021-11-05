@@ -9,6 +9,15 @@ workflows:
     jobs:
       - cypress/run:
           group: 'spriteCloud QA Assignment'
+          pre-steps:
+            - run:
+                when: always
+                name: Delete old reports
+                command: rm -rf /root/project/cypress/reports/
+            - run:
+                when: always
+                name: Make artifact directories
+                command: mkdir -p /cypress/reports/
           post-steps:
             - run: 
                 when: always
