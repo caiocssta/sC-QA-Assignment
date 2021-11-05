@@ -15,7 +15,7 @@
     "pretest": "if exist cypress\\reports rmdir cypress\\reports /s /q",
     "cy:test": "cypress run --reporter mochawesome",
     "merge": "mochawesome-merge cypress/reports/mochawesome-report/*.json > cypress/reports/mochawesome.json",
-    "generate_mochawesome_report": "marge cypress/reports/mochawesome.json --reportDir ./ --inline --saveJson",
+    "generate_mochawesome_report": "marge cypress/reports/mochawesome.json --reportDir cypress/reports/marge/ --inline --saveJson",
     "cy:report": "npm run merge && npm run generate_mochawesome_report"
   },
   "author": "Caio Costa",

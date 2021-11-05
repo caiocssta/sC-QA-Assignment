@@ -21,10 +21,7 @@ workflows:
             - store_artifacts:
                 path: mochawesome.html
                 destination: /cypress/reports
-            - store_artifacts:
-                path: mochawesome.json
-                destination: /cypress/reports
             - run:
                 when: always
                 name: Upload results to Calliope Pro
-                command: curl -X POST -H "x-api-key:YzI5MDY5YTU1ZTE0MDIzM2RjYWFiNmJjNzUwYTU1Y2Y1MmVmN2IxN2Y1ZmM0MWRiNmE4ZmZjMDZiMWFiZTYwOTMy" -H "multipart/form-data" -F "file[]=@mochawesome.json" "https://app.calliope.pro/api/v2/profile/3788/import?os=myos&platform=myplatform&build=mybuild"
+                command: curl -X POST -H "x-api-key:YzI5MDY5YTU1ZTE0MDIzM2RjYWFiNmJjNzUwYTU1Y2Y1MmVmN2IxN2Y1ZmM0MWRiNmE4ZmZjMDZiMWFiZTYwOTMy" -H "multipart/form-data" -F "file[]=@cypress/reports/marge/mochawesome.json" "https://app.calliope.pro/api/v2/profile/3788/import?os=myos&platform=myplatform&build=mybuild"
