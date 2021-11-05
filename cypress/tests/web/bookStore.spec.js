@@ -42,7 +42,7 @@ describe("Validate Book Store functionalities", () => {
 
     });
     
-    it('Add to Your Collection button works fine', () => {
+    xit('Add to Your Collection button works fine', () => {
         cy.get(profileSelectors.goToStoreButton).click();
         cy.get(bookStoreSelectors.gitPocketBook).click();
 
