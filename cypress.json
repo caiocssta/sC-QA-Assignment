@@ -6,7 +6,7 @@
     "reporter": "mochawesome",
     "reporterOptions": {
         "charts": true,
-        "overwrite": true,
+        "overwrite": false,
         "html": false,
         "json": true,
         "reportDir": "cypress/reports/mochawesome-report"
