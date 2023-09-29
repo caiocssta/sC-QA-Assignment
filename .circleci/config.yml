@@ -12,14 +12,18 @@ workflows:
           post-steps:
             - run: 
                 when: always
-                name: Run Cypress tests
-                command: npm run cy:test
+                name: Create mochawesome report
+                command: npm run merge
             - run: 
                 when: always
-                name: Create mochawesome report
-                command: npm run cy:report
+                name: Generate mochawesome HTML report
+                command: npm run generate_mochawesome_report
             - store_artifacts:
-                path: cypress/reports/
+                path: mochawesome.html
+                destination: /cypress/reports
             - store_test_results:
-                path: cypress/reports
-          
+                path: mochawesome.json
+            - run:
+                when: always
+                name: Upload results to Calliope Pro
+                command: curl -X POST -H "x-api-key:YzI5MDY5YTU1ZTE0MDIzM2RjYWFiNmJjNzUwYTU1Y2Y1MmVmN2IxN2Y1ZmM0MWRiNmE4ZmZjMDZiMWFiZTYwOTMy" -H "multipart/form-data" -F "file[]=@mochawesome.json" "https://app.calliope.pro/api/v2/profile/3788/import?os=myos&platform=myplatform&build=mybuild"
